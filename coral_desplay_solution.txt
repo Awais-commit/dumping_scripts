@@ -1,0 +1,17 @@
+Didn't display on the HDMI
+Error: (edgetpu_detect_server:4074): Gtk-WARNING **: 08:05:04.879: cannot open display:
+
+Temp Solution:
+Enter command and reboot: xhost si:localuser:root
+Link: https://askubuntu.com/questions/961967/why-dont-gksu-gksudo-or-launching-a-graphical-application-with-sudo-work-with-w 
+
+add to .bashrc:
+
+alias gsuon='xhost si:localuser:root'
+
+alias gsuoff='xhost -si:localuser:root'
+
+ or edit ~/.xinitrc and add these two lines:
+#! /bin/bash
+xhost +localhost &
+Link:https://askubuntu.com/questions/614387/gksu-gtk-warning-cannot-open-display-0
