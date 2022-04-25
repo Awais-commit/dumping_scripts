@@ -12,3 +12,4 @@ for image in glob.glob(path_read + "/*.png"):
 	#print(type(frame))
 	resized = cv2.resize(frame, (32, 32), interpolation = cv2.INTER_NEAREST)
 	cv2.imwrite(path_write + "%i.png"%count,resized)
+print("Done Resizing")
