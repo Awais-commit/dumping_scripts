@@ -1,0 +1,10 @@
+diskpart
+list disk
+select disk 0
+clean
+
+
+create partition priamry size = 
+format fs=ntfs quick
+assign
+active
